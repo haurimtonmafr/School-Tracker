@@ -14,6 +14,8 @@
 		95EAC5DB208E3A1200B0D5F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EAC5D9208E3A1200B0D5F5 /* LaunchScreen.storyboard */; };
 		95EAC5E6208E3A1200B0D5F5 /* School_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5E5208E3A1200B0D5F5 /* School_TrackerTests.swift */; };
 		95EAC5F1208E3A1200B0D5F5 /* School_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5F0208E3A1200B0D5F5 /* School_TrackerUITests.swift */; };
+		95EAC600208E3ADF00B0D5F5 /* SchoolBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5FF208E3ADF00B0D5F5 /* SchoolBus.swift */; };
+		95EAC602208E3B6000B0D5F5 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC601208E3B6000B0D5F5 /* BusStop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		95EAC5EC208E3A1200B0D5F5 /* School TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "School TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EAC5F0208E3A1200B0D5F5 /* School_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School_TrackerUITests.swift; sourceTree = "<group>"; };
 		95EAC5F2208E3A1200B0D5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EAC5FF208E3ADF00B0D5F5 /* SchoolBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBus.swift; sourceTree = "<group>"; };
+		95EAC601208E3B6000B0D5F5 /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		95EAC5CF208E3A1000B0D5F5 /* School Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				95EAC5FE208E3AB600B0D5F5 /* Model */,
 				95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */,
 				95EAC5D2208E3A1000B0D5F5 /* ViewController.swift */,
 				95EAC5D4208E3A1000B0D5F5 /* Main.storyboard */,
@@ -123,6 +128,15 @@
 				95EAC5F2208E3A1200B0D5F5 /* Info.plist */,
 			);
 			path = "School TrackerUITests";
+			sourceTree = "<group>";
+		};
+		95EAC5FE208E3AB600B0D5F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95EAC5FF208E3ADF00B0D5F5 /* SchoolBus.swift */,
+				95EAC601208E3B6000B0D5F5 /* BusStop.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95EAC602208E3B6000B0D5F5 /* BusStop.swift in Sources */,
+				95EAC600208E3ADF00B0D5F5 /* SchoolBus.swift in Sources */,
 				95EAC5D3208E3A1000B0D5F5 /* ViewController.swift in Sources */,
 				95EAC5D1208E3A1000B0D5F5 /* AppDelegate.swift in Sources */,
 			);
