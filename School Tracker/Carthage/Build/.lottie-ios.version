@@ -1,0 +1,24 @@
+{
+  "iOS" : [
+    {
+      "hash" : "a27c0dbcafca735df5409bea97a90fb087a0ef7b00f4d8f801e1d195c9d941bb",
+      "name" : "Lottie"
+    }
+  ],
+  "commitish" : "23abc3a23997b8d4c16c89d29d34542dfeac040b",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "hash" : "4698600d1998aa43ea6753197ab318e0bd7867249ac2c1eeadec1f6d560fe265",
+      "name" : "Lottie"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "bd7d2a0166c643f11e5e34d622a6c57498aac0188134f12dc97ecf34da47cf6a",
+      "name" : "Lottie"
+    }
+  ]
+}
