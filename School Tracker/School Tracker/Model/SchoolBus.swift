@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+/**
+ Conform Codable protocol in order to use Codabel JSON Parser
+ */
+struct SchoolBus: Codable {
+    let id: Int?
+    let name: String?
+    let description: String?
+    let stopsURL: URL?
+    let imgURL: URL?
+    
+    /**
+     Solve camelcase constants conflict in Swift
+     */
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case description
+        case stopsURL = "stops_url"
+        case imgURL = "img_url"
+    }
+}
