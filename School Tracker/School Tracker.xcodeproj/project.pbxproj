@@ -16,6 +16,7 @@
 		95EAC5F1208E3A1200B0D5F5 /* School_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5F0208E3A1200B0D5F5 /* School_TrackerUITests.swift */; };
 		95EAC600208E3ADF00B0D5F5 /* SchoolBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5FF208E3ADF00B0D5F5 /* SchoolBus.swift */; };
 		95EAC602208E3B6000B0D5F5 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC601208E3B6000B0D5F5 /* BusStop.swift */; };
+		95EAC605208E3E3A00B0D5F5 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC604208E3E3A00B0D5F5 /* ApiServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		95EAC5F2208E3A1200B0D5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95EAC5FF208E3ADF00B0D5F5 /* SchoolBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBus.swift; sourceTree = "<group>"; };
 		95EAC601208E3B6000B0D5F5 /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
+		95EAC604208E3E3A00B0D5F5 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				95EAC5FE208E3AB600B0D5F5 /* Model */,
+				95EAC603208E3E1700B0D5F5 /* Network */,
 				95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */,
 				95EAC5D2208E3A1000B0D5F5 /* ViewController.swift */,
 				95EAC5D4208E3A1000B0D5F5 /* Main.storyboard */,
@@ -137,6 +140,14 @@
 				95EAC601208E3B6000B0D5F5 /* BusStop.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		95EAC603208E3E1700B0D5F5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				95EAC604208E3E3A00B0D5F5 /* ApiServices.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 				95EAC600208E3ADF00B0D5F5 /* SchoolBus.swift in Sources */,
 				95EAC5D3208E3A1000B0D5F5 /* ViewController.swift in Sources */,
 				95EAC5D1208E3A1000B0D5F5 /* AppDelegate.swift in Sources */,
+				95EAC605208E3E3A00B0D5F5 /* ApiServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
