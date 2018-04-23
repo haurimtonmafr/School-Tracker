@@ -8,8 +8,14 @@
 
 import Foundation
 
+/**
+ This class will handle all the API services
+ */
 class ApiServices {
     
+    /**
+     GET school buses function that returns an array of SchoolBuses
+     */
     public func getSchoolBuses(onSuccess success: @escaping (_ buses: [SchoolBus]) -> Void, onFailure failure: @escaping (_ error: String) -> Void) {
         guard let schoolBusesURL = URL(string: "https://api.myjson.com/bins/10yg1t") else {
             failure("Cannot convert urlString to URL")
@@ -22,7 +28,13 @@ class ApiServices {
                 return
             }
             do {
+                /**
+                 Create decoder
+                 */
                 let decoder = JSONDecoder()
+                /**
+                 Decode data to objects of type SchoolBusResponse
+                 */
                 let schoolBusData = try decoder.decode(SchoolBusResponse.self, from: data)
                 guard let responseSchoolBus = schoolBusData.response, let buses = schoolBusData.schoolBuses else {
                     failure("SchoolBus data properties are nil (\"\(String(describing: schoolBusData.response))\", \"\(String(describing: schoolBusData.schoolBuses))\")")
@@ -40,6 +52,9 @@ class ApiServices {
         }.resume()
     }
     
+    /**
+     GET bus stops function that returns an array of BusStops for received busStops URL
+     */
     public func getSchoolBusStops(stopsURL: URL, onSuccess success: @escaping (_ stops: [BusStop]) -> Void, onFailure failure: @escaping (_ error: String) -> Void) {
         
         URLSession.shared.dataTask(with: stopsURL) { (data, response, error) in
@@ -48,7 +63,13 @@ class ApiServices {
                 return
             }
             do {
+                /**
+                 Create decoder
+                 */
                 let decoder = JSONDecoder()
+                /**
+                 Decode data to objects of type BusStopResponse
+                 */
                 let stopsData = try decoder.decode(BusStopResponse.self, from: data)
                 guard let responseStops = stopsData.response, let stops = stopsData.busStops else {
                     failure("SchoolBus data properties are nil (\"\(String(describing: stopsData.response))\", \"\(String(describing: stopsData.busStops))\")")
