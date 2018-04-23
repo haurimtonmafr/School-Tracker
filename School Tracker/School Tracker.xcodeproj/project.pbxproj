@@ -17,6 +17,7 @@
 		95EAC600208E3ADF00B0D5F5 /* SchoolBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5FF208E3ADF00B0D5F5 /* SchoolBus.swift */; };
 		95EAC602208E3B6000B0D5F5 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC601208E3B6000B0D5F5 /* BusStop.swift */; };
 		95EAC605208E3E3A00B0D5F5 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC604208E3E3A00B0D5F5 /* ApiServices.swift */; };
+		95EFB5AE208E5881001579CE /* SchoolBusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFB5AD208E5881001579CE /* SchoolBusViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		95EAC5FF208E3ADF00B0D5F5 /* SchoolBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBus.swift; sourceTree = "<group>"; };
 		95EAC601208E3B6000B0D5F5 /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
 		95EAC604208E3E3A00B0D5F5 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		95EFB5AD208E5881001579CE /* SchoolBusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				95EAC5FE208E3AB600B0D5F5 /* Model */,
 				95EAC603208E3E1700B0D5F5 /* Network */,
+				95EFB5AC208E586C001579CE /* ViewModels */,
 				95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */,
 				95EAC5D2208E3A1000B0D5F5 /* ViewController.swift */,
 				95EAC5D4208E3A1000B0D5F5 /* Main.storyboard */,
