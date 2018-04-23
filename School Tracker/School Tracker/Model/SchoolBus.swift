@@ -29,3 +29,19 @@ struct SchoolBus: Codable {
         case imgURL = "img_url"
     }
 }
+
+/**
+ Create model for SchoolBusResponse and conform Codable protocol in order to use Codabel JSON Parser
+ */
+struct SchoolBusResponse: Codable {
+    let response: Bool?
+    let schoolBuses: [SchoolBus]?
+    
+    /**
+     Solve camelcase constants conflict in Swift
+     */
+    private enum CodingKeys: String, CodingKey {
+        case response
+        case schoolBuses = "school_buses"
+    }
+}
