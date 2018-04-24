@@ -19,6 +19,7 @@ class BusesViewController: UIViewController {
             fillUI()
         }
     }
+    var selectedBusID: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,12 @@ class BusesViewController: UIViewController {
     
     func fillUI() {
         busesTableView?.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let busStopsVC = segue.destination as? BusStopsViewController, let selectedBusID = selectedBusID else { return }
+        
+        busStopsVC.schoolBus = schoolBusViewModel.schoolBuses.first(where: { $0.id == selectedBusID })
     }
 
 }
@@ -44,6 +51,7 @@ extension BusesViewController: UITableViewDataSource {
         
         return cell
     }
+    
 }
 
 /**
@@ -56,5 +64,9 @@ extension BusesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.setSelected(false, animated: true)
+        selectedBusID = schoolBusViewModel.schoolBuses[indexPath.row].id
+        self.performSegue(withIdentifier: "SegueToBusStopsVC", sender: self)
+        
     }
+    
 }
