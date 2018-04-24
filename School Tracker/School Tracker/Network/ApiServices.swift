@@ -55,11 +55,11 @@ class ApiServices {
     /**
      GET bus stops function that returns an array of BusStops for received busStops URL
      */
-    public func getSchoolBusStops(stopsURL: URL, onSuccess success: @escaping (_ stops: [BusStop]) -> Void, onFailure failure: @escaping (_ error: String) -> Void) {
+    public func getSchoolBusStops(stopsURL: URL, onSuccess success: @escaping (_ stops: BusStopResponse) -> Void, onFailure failure: @escaping (_ error: String) -> Void) {
         
         URLSession.shared.dataTask(with: stopsURL) { (data, response, error) in
             guard let data = data else {
-                failure("Data is nil")
+                failure(error!.localizedDescription)
                 return
             }
             do {
@@ -76,7 +76,7 @@ class ApiServices {
                     return
                 }
                 if responseStops {
-                    success(stops)
+                    success(stopsData)
                 } else {
                     failure("BusStops service response was \(responseStops)")
                 }
