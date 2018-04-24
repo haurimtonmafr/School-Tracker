@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BA0532B9B4C099CB62358DF /* Pods_School_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9DE64FC58F75B0FA58C737 /* Pods_School_Tracker.framework */; };
+		951AA016208F19EC00A4AAA7 /* splasIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 951AA015208F19EC00A4AAA7 /* splasIcon.png */; };
 		95EAC5D1208E3A1000B0D5F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */; };
 		95EAC5D3208E3A1000B0D5F5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5D2208E3A1000B0D5F5 /* LoadingViewController.swift */; };
 		95EAC5D6208E3A1000B0D5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EAC5D4208E3A1000B0D5F5 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		95EAC602208E3B6000B0D5F5 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC601208E3B6000B0D5F5 /* BusStop.swift */; };
 		95EAC605208E3E3A00B0D5F5 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC604208E3E3A00B0D5F5 /* ApiServices.swift */; };
 		95EFB5AE208E5881001579CE /* SchoolBusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFB5AD208E5881001579CE /* SchoolBusViewModel.swift */; };
-		95EFB5B1208E784E001579CE /* splashIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 95EFB5B0208E784E001579CE /* splashIcon.png */; };
 		95EFB5B5208E7C1D001579CE /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EFB5B4208E7C1D001579CE /* Lottie.framework */; };
 		95EFB5B8208E7FD0001579CE /* BusesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFB5B7208E7FD0001579CE /* BusesViewController.swift */; };
 		95EFB5BD208E81BE001579CE /* ex-splash.aep in Resources */ = {isa = PBXBuildFile; fileRef = 95EFB5BB208E81BD001579CE /* ex-splash.aep */; };
@@ -49,6 +49,7 @@
 /* Begin PBXFileReference section */
 		0339600DE1D0B93785E69F8F /* Pods-School Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-School Tracker/Pods-School Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		23955D6BA24B0988C648CC6C /* Pods-School Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-School Tracker/Pods-School Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		951AA015208F19EC00A4AAA7 /* splasIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splasIcon.png; sourceTree = "<group>"; };
 		95EAC5CD208E3A1000B0D5F5 /* School Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "School Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EAC5D2208E3A1000B0D5F5 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		95EAC601208E3B6000B0D5F5 /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
 		95EAC604208E3E3A00B0D5F5 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
 		95EFB5AD208E5881001579CE /* SchoolBusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusViewModel.swift; sourceTree = "<group>"; };
-		95EFB5B0208E784E001579CE /* splashIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashIcon.png; sourceTree = "<group>"; };
 		95EFB5B4208E7C1D001579CE /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		95EFB5B7208E7FD0001579CE /* BusesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusesViewController.swift; sourceTree = "<group>"; };
 		95EFB5BB208E81BD001579CE /* ex-splash.aep */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ex-splash.aep"; sourceTree = "<group>"; };
@@ -131,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				95EFB5B2208E7853001579CE /* Multimedia */,
+				951AA015208F19EC00A4AAA7 /* splasIcon.png */,
 				95EAC5FE208E3AB600B0D5F5 /* Model */,
 				95EAC603208E3E1700B0D5F5 /* Network */,
 				95EFB5AC208E586C001579CE /* ViewModels */,
@@ -202,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				95EFB5B9208E816E001579CE /* Animations */,
-				95EFB5B0208E784E001579CE /* splashIcon.png */,
 			);
 			path = Multimedia;
 			sourceTree = "<group>";
@@ -361,9 +361,9 @@
 			files = (
 				95EAC5DB208E3A1200B0D5F5 /* LaunchScreen.storyboard in Resources */,
 				95EFB5BE208E81BE001579CE /* ex-splash.json in Resources */,
-				95EFB5B1208E784E001579CE /* splashIcon.png in Resources */,
 				95EAC5D8208E3A1200B0D5F5 /* Assets.xcassets in Resources */,
 				95EAC5D6208E3A1000B0D5F5 /* Main.storyboard in Resources */,
+				951AA016208F19EC00A4AAA7 /* splasIcon.png in Resources */,
 				95EFB5BD208E81BE001579CE /* ex-splash.aep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,21 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Wo-Av-tuA">
-                                <rect key="frame" x="74.5" y="220.5" width="225" height="225"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splasIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Wo-Av-tuA">
+                                <rect key="frame" x="74.5" y="190.5" width="225" height="285.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="3O4-5F-cZp"/>
-                                    <constraint firstAttribute="height" constant="225" id="Ifa-Rn-yjf"/>
+                                    <constraint firstAttribute="width" secondItem="0Wo-Av-tuA" secondAttribute="height" multiplier="466:592" id="M0c-jl-xWe"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-WE-0I0">
-                                <rect key="frame" x="117.5" y="475.5" width="139.5" height="48"/>
+                                <rect key="frame" x="117.5" y="506" width="139.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQy-55-L1F">
-                                <rect key="frame" x="123" y="142.5" width="128.5" height="48"/>
+                                <rect key="frame" x="123" y="112.5" width="128.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +57,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splashIcon.png" width="225" height="225"/>
+        <image name="splasIcon.png" width="466" height="592"/>
     </resources>
 </document>
