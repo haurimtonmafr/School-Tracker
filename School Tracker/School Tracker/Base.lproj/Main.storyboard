@@ -1,24 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoadingViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoadingViewController" id="BYZ-38-t0r" customClass="LoadingViewController" customModule="School_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Y2m-aN-08E" userLabel="ContainerStackView">
+                                <rect key="frame" x="40" y="238" width="295" height="191.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-4v-sWT" userLabel="AnimationView" customClass="LOTAnimationView">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="147.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dg8-4v-sWT" secondAttribute="height" multiplier="4:2" id="bOr-uN-8kB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="ex-splash"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ync-OY-xTX" userLabel="LabelCargando">
+                                        <rect key="frame" x="94" y="167.5" width="107" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dg8-4v-sWT" secondAttribute="trailing" id="MxY-Gz-ml7"/>
+                                    <constraint firstItem="dg8-4v-sWT" firstAttribute="leading" secondItem="Y2m-aN-08E" secondAttribute="leading" id="P8V-9h-bNx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.75686274509803919" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y2m-aN-08E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="34G-1N-hmR"/>
+                            <constraint firstItem="Y2m-aN-08E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BId-Bn-Prx"/>
+                            <constraint firstItem="Y2m-aN-08E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="kGt-zR-O88"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y2m-aN-08E" secondAttribute="trailing" constant="40" id="lhh-Nf-DeG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="dg8-4v-sWT" id="KeN-ax-58L"/>
+                        <segue destination="ktf-mO-ogz" kind="presentation" identifier="SegueToBusesVC" id="Aat-nS-UmY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="442" y="34"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C2o-X7-wdz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ktf-mO-ogz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o7s-es-kRS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1450980392" green="0.75686274509999996" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nbq-Un-EzE" kind="relationship" relationship="rootViewController" id="ZLV-bh-G8k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DA8-iD-PDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.8" y="33.733133433283363"/>
+        </scene>
+        <!--School Tracker-->
+        <scene sceneID="Jyz-NS-CkF">
+            <objects>
+                <viewController id="nbq-Un-EzE" customClass="BusesViewController" customModule="School_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oqj-5U-m4M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-00-Uxp" userLabel="BusesTableView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SchoolBusCell" rowHeight="100" id="gDi-tz-fwi" customClass="SchoolBusTableViewCell" customModule="School_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gDi-tz-fwi" id="WDz-9J-JA7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E1D-bp-Hap" userLabel="BusIconImageView">
+                                                    <rect key="frame" x="10" y="10" width="79.5" height="79.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="E1D-bp-Hap" secondAttribute="height" multiplier="1:1" id="8ni-9P-OaF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ve7-I3-XOv" userLabel="ContainerStackView">
+                                                    <rect key="frame" x="109.5" y="19.5" width="240.5" height="61"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhP-JY-9tI" userLabel="BusNameLabel">
+                                                            <rect key="frame" x="0.0" y="0.0" width="240.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Q-EX-jKa" userLabel="BusDescriptionLabel">
+                                                            <rect key="frame" x="0.0" y="40.5" width="240.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ve7-I3-XOv" firstAttribute="centerY" secondItem="WDz-9J-JA7" secondAttribute="centerY" id="2Qf-wB-paS"/>
+                                                <constraint firstItem="ve7-I3-XOv" firstAttribute="leading" secondItem="E1D-bp-Hap" secondAttribute="trailing" constant="20" id="50F-mc-Tfd"/>
+                                                <constraint firstAttribute="bottom" secondItem="E1D-bp-Hap" secondAttribute="bottom" constant="10" id="Vnc-mb-jj3"/>
+                                                <constraint firstItem="E1D-bp-Hap" firstAttribute="top" secondItem="WDz-9J-JA7" secondAttribute="top" constant="10" id="XKF-Uh-Cmo"/>
+                                                <constraint firstItem="E1D-bp-Hap" firstAttribute="leading" secondItem="WDz-9J-JA7" secondAttribute="leading" constant="10" id="YXh-wr-rXR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ve7-I3-XOv" secondAttribute="trailing" constant="10" id="mFM-pJ-aU5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="busDescriptionLabel" destination="Z8Q-EX-jKa" id="TGg-j1-WD3"/>
+                                            <outlet property="busIconImageView" destination="E1D-bp-Hap" id="Ufq-cq-Aot"/>
+                                            <outlet property="busNameLabel" destination="JhP-JY-9tI" id="ZmN-go-kll"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nbq-Un-EzE" id="egK-2D-gpd"/>
+                                    <outlet property="delegate" destination="nbq-Un-EzE" id="PL8-oI-CuH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tdf-00-Uxp" firstAttribute="trailing" secondItem="uxE-t9-wvg" secondAttribute="trailing" id="4Nb-IM-9ET"/>
+                            <constraint firstItem="tdf-00-Uxp" firstAttribute="leading" secondItem="uxE-t9-wvg" secondAttribute="leading" id="Cr0-sx-TQN"/>
+                            <constraint firstItem="tdf-00-Uxp" firstAttribute="top" secondItem="uxE-t9-wvg" secondAttribute="top" id="aB6-Aq-pgg"/>
+                            <constraint firstItem="tdf-00-Uxp" firstAttribute="bottom" secondItem="uxE-t9-wvg" secondAttribute="bottom" id="f4A-zA-Bcc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uxE-t9-wvg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="School Tracker" id="8OR-VV-DHh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ccx-Mh-Spr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="busesTableView" destination="tdf-00-Uxp" id="YQd-7e-ZTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mqj-LR-pNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2149.5999999999999" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
