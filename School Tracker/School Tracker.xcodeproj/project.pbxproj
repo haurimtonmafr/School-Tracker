@@ -10,6 +10,11 @@
 		3BA0532B9B4C099CB62358DF /* Pods_School_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9DE64FC58F75B0FA58C737 /* Pods_School_Tracker.framework */; };
 		951AA016208F19EC00A4AAA7 /* splasIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 951AA015208F19EC00A4AAA7 /* splasIcon.png */; };
 		959BF4C6208EF650008B65BA /* TimeIntervalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959BF4C5208EF650008B65BA /* TimeIntervalUtils.swift */; };
+		959BF4C9208F0E07008B65BA /* bouncy_mapmarker.json in Resources */ = {isa = PBXBuildFile; fileRef = 959BF4C8208F0E06008B65BA /* bouncy_mapmarker.json */; };
+		95E2E26A208F57610024FD8C /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E2E269208F57610024FD8C /* NetworkReachability.swift */; };
+		95E2E274208F632D0024FD8C /* NoConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E2E272208F632D0024FD8C /* NoConnectionViewController.swift */; };
+		95E2E275208F632D0024FD8C /* NoConnectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E2E273208F632D0024FD8C /* NoConnectionViewController.xib */; };
+		95E2E278208F639E0024FD8C /* network_lost.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E2E277208F639E0024FD8C /* network_lost.json */; };
 		95EAC5D1208E3A1000B0D5F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */; };
 		95EAC5D3208E3A1000B0D5F5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5D2208E3A1000B0D5F5 /* LoadingViewController.swift */; };
 		95EAC5D6208E3A1000B0D5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EAC5D4208E3A1000B0D5F5 /* Main.storyboard */; };
@@ -52,6 +57,11 @@
 		23955D6BA24B0988C648CC6C /* Pods-School Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-School Tracker/Pods-School Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		951AA015208F19EC00A4AAA7 /* splasIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splasIcon.png; sourceTree = "<group>"; };
 		959BF4C5208EF650008B65BA /* TimeIntervalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalUtils.swift; sourceTree = "<group>"; };
+		959BF4C8208F0E06008B65BA /* bouncy_mapmarker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bouncy_mapmarker.json; sourceTree = "<group>"; };
+		95E2E269208F57610024FD8C /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		95E2E272208F632D0024FD8C /* NoConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionViewController.swift; sourceTree = "<group>"; };
+		95E2E273208F632D0024FD8C /* NoConnectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoConnectionViewController.xib; sourceTree = "<group>"; };
+		95E2E277208F639E0024FD8C /* network_lost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = network_lost.json; sourceTree = "<group>"; };
 		95EAC5CD208E3A1000B0D5F5 /* School Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "School Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EAC5D2208E3A1000B0D5F5 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +117,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		959BF4C4208EF639008B65BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				959BF4C5208EF650008B65BA /* TimeIntervalUtils.swift */,
+				95E2E269208F57610024FD8C /* NetworkReachability.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		959BF4C7208F0DF9008B65BA /* BouncingMapMarker */ = {
+			isa = PBXGroup;
+			children = (
+				959BF4C8208F0E06008B65BA /* bouncy_mapmarker.json */,
+			);
+			path = BouncingMapMarker;
+			sourceTree = "<group>";
+		};
+		95E2E271208F63140024FD8C /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				95E2E273208F632D0024FD8C /* NoConnectionViewController.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		95E2E276208F638D0024FD8C /* NetworkLost */ = {
+			isa = PBXGroup;
+			children = (
+				95E2E277208F639E0024FD8C /* network_lost.json */,
+			);
+			path = NetworkLost;
+			sourceTree = "<group>";
+		};
 		95EAC5C4208E3A1000B0D5F5 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +183,8 @@
 				95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */,
 				95EFB5AF208E7583001579CE /* ViewControllers */,
 				95EFB5BF208E9B32001579CE /* Cells */,
+				95E2E271208F63140024FD8C /* XIB */,
+				959BF4C4208EF639008B65BA /* Utils */,
 				95EAC5D4208E3A1000B0D5F5 /* Main.storyboard */,
 				95EAC5D7208E3A1200B0D5F5 /* Assets.xcassets */,
 				95EAC5D9208E3A1200B0D5F5 /* LaunchScreen.storyboard */,
@@ -194,6 +239,7 @@
 		95EFB5AF208E7583001579CE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				95E2E272208F632D0024FD8C /* NoConnectionViewController.swift */,
 				95EAC5D2208E3A1000B0D5F5 /* LoadingViewController.swift */,
 				95EFB5B7208E7FD0001579CE /* BusesViewController.swift */,
 				95EFB5C4208EB9FD001579CE /* BusStopsViewController.swift */,
@@ -222,7 +268,9 @@
 		95EFB5B9208E816E001579CE /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				959BF4C7208F0DF9008B65BA /* BouncingMapMarker */,
 				95EFB5BA208E81AC001579CE /* MovingBus */,
+				95E2E276208F638D0024FD8C /* NetworkLost */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -364,9 +412,12 @@
 				95EAC5DB208E3A1200B0D5F5 /* LaunchScreen.storyboard in Resources */,
 				95EFB5BE208E81BE001579CE /* ex-splash.json in Resources */,
 				95EAC5D8208E3A1200B0D5F5 /* Assets.xcassets in Resources */,
+				95E2E275208F632D0024FD8C /* NoConnectionViewController.xib in Resources */,
 				95EAC5D6208E3A1000B0D5F5 /* Main.storyboard in Resources */,
+				95E2E278208F639E0024FD8C /* network_lost.json in Resources */,
 				951AA016208F19EC00A4AAA7 /* splasIcon.png in Resources */,
 				95EFB5BD208E81BE001579CE /* ex-splash.aep in Resources */,
+				959BF4C9208F0E07008B65BA /* bouncy_mapmarker.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,14 +518,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E2E26A208F57610024FD8C /* NetworkReachability.swift in Sources */,
 				95EFB5B8208E7FD0001579CE /* BusesViewController.swift in Sources */,
 				95EAC602208E3B6000B0D5F5 /* BusStop.swift in Sources */,
 				95EAC600208E3ADF00B0D5F5 /* SchoolBus.swift in Sources */,
+				959BF4C6208EF650008B65BA /* TimeIntervalUtils.swift in Sources */,
 				95EAC5D3208E3A1000B0D5F5 /* LoadingViewController.swift in Sources */,
 				95EFB5C1208E9B49001579CE /* SchoolBusTableViewCell.swift in Sources */,
 				95EFB5C5208EB9FD001579CE /* BusStopsViewController.swift in Sources */,
 				95EAC5D1208E3A1000B0D5F5 /* AppDelegate.swift in Sources */,
 				95EAC605208E3E3A00B0D5F5 /* ApiServices.swift in Sources */,
+				95E2E274208F632D0024FD8C /* NoConnectionViewController.swift in Sources */,
 				95EFB5AE208E5881001579CE /* SchoolBusViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

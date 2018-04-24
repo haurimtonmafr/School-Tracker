@@ -8,6 +8,7 @@
 
 import UIKit
 import Lottie
+import ReachabilitySwift
 
 class LoadingViewController: UIViewController {
     
@@ -26,6 +27,18 @@ class LoadingViewController: UIViewController {
         loadBuses()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NetworkReachability.shared.addListener(listener: self)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NetworkReachability.shared.removeListener(listener: self)
+    }
+    
     /**
      Play loading animation while data is being retrieved
      */
@@ -33,7 +46,7 @@ class LoadingViewController: UIViewController {
         /**
          Set a timer so the user knows there was a loading proccess
          */
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(animationView.animationDuration), target: self, selector: #selector(LoadingViewController.loadingTimeDone), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(3.0), target: self, selector: #selector(LoadingViewController.loadingTimeDone), userInfo: nil, repeats: false)
         
         animationView.play()
     }
@@ -44,6 +57,7 @@ class LoadingViewController: UIViewController {
     @objc func loadingTimeDone() {
         timerDone = true
         if schoolBusViewModel != nil {
+            animationView.stop()
             self.performSegue(withIdentifier: "SegueToBusesVC", sender: self)
         }
     }
@@ -56,7 +70,16 @@ class LoadingViewController: UIViewController {
         apiServ.getSchoolBuses(onSuccess: { (buses) in
             self.schoolBusViewModel = SchoolBusViewModel(schoolBuses: buses)
             if self.timerDone {
-                self.performSegue(withIdentifier: "SegueToBusesVC", sender: self)
+                DispatchQueue.main.async {
+                    self.animationView.stop()
+                }
+                if self.presentedViewController == nil {
+                    self.performSegue(withIdentifier: "SegueToBusesVC", sender: self)
+                } else {
+                    self.presentedViewController?.dismiss(animated: true, completion: {
+                        self.performSegue(withIdentifier: "SegueToBusesVC", sender: self)
+                    })
+                }
             }
         }, onFailure: { (error) in
                 print(error)
@@ -73,10 +96,30 @@ class LoadingViewController: UIViewController {
         
         busesVC.schoolBusViewModel = schoolBusViewModel
         
-        timer.invalidate()
+        timer?.invalidate()
         timer = nil
         schoolBusViewModel = nil
     }
 
+    func connectionError() {
+        let noConnectionVC = NoConnectionViewController()
+        noConnectionVC.modalPresentationStyle = .overFullScreen
+        
+        DispatchQueue.main.async {
+            self.present(noConnectionVC, animated: true, completion: nil)
+        }
+    }
+    
+}
+
+extension LoadingViewController: NetworkStatusListener {
+    func networkStatusDidChange(status: Reachability.NetworkStatus) {
+        switch status {
+        case .reachableViaWiFi, .reachableViaWWAN:
+            loadBuses()
+        case .notReachable:
+            self.connectionError()
+        }
+    }
 }
 

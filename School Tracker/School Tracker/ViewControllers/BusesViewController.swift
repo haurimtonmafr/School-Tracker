@@ -20,14 +20,30 @@ class BusesViewController: UIViewController {
         }
     }
     var selectedBusID: Int!
+    /**
+     In case we want to refresh data
+     */
+    /*lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: UIControlEvents.valueChanged)
+        
+        return refreshControl
+    }()*/
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        busesTableView.addSubview(refreshControl)
     }
     
     func fillUI() {
         busesTableView?.reloadData()
     }
+    
+    /*@objc func refresh(_ refreshControl: UIRefreshControl) {
+        busesTableView?.reloadData()
+        refreshControl.endRefreshing()
+    }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let busStopsVC = segue.destination as? BusStopsViewController, let selectedBusID = selectedBusID else { return }
