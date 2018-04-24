@@ -1,2 +1,4 @@
 # Use the latest version on branch "master"
 github "airbnb/lottie-ios" "master"
+# Use versions on top of 4.0
+github "onevcat/Kingfisher" ~> 4.0
