@@ -25,6 +25,7 @@
 		95EFB5BE208E81BE001579CE /* ex-splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 95EFB5BC208E81BE001579CE /* ex-splash.json */; };
 		95EFB5C1208E9B49001579CE /* SchoolBusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFB5C0208E9B49001579CE /* SchoolBusTableViewCell.swift */; };
 		95EFB5C3208EA3BF001579CE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EFB5C2208EA3BF001579CE /* Kingfisher.framework */; };
+		95EFB5C5208EB9FD001579CE /* BusStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFB5C4208EB9FD001579CE /* BusStopsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		95EFB5BC208E81BE001579CE /* ex-splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ex-splash.json"; sourceTree = "<group>"; };
 		95EFB5C0208E9B49001579CE /* SchoolBusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBusTableViewCell.swift; sourceTree = "<group>"; };
 		95EFB5C2208EA3BF001579CE /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		95EFB5C4208EB9FD001579CE /* BusStopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			children = (
 				95EAC5D2208E3A1000B0D5F5 /* LoadingViewController.swift */,
 				95EFB5B7208E7FD0001579CE /* BusesViewController.swift */,
+				95EFB5C4208EB9FD001579CE /* BusStopsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				95EAC600208E3ADF00B0D5F5 /* SchoolBus.swift in Sources */,
 				95EAC5D3208E3A1000B0D5F5 /* LoadingViewController.swift in Sources */,
 				95EFB5C1208E9B49001579CE /* SchoolBusTableViewCell.swift in Sources */,
+				95EFB5C5208EB9FD001579CE /* BusStopsViewController.swift in Sources */,
 				95EAC5D1208E3A1000B0D5F5 /* AppDelegate.swift in Sources */,
 				95EAC605208E3E3A00B0D5F5 /* ApiServices.swift in Sources */,
 				95EFB5AE208E5881001579CE /* SchoolBusViewModel.swift in Sources */,

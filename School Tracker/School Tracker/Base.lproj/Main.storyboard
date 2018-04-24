@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1256.8" y="33.733133433283363"/>
         </scene>
-        <!--School Tracker-->
+        <!--BusesViewController-->
         <scene sceneID="Jyz-NS-CkF">
             <objects>
-                <viewController id="nbq-Un-EzE" customClass="BusesViewController" customModule="School_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="BusesViewController" id="nbq-Un-EzE" customClass="BusesViewController" customModule="School_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oqj-5U-m4M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,17 +161,34 @@
                         <viewLayoutGuide key="safeArea" id="uxE-t9-wvg"/>
                     </view>
                     <navigationItem key="navigationItem" title="School Tracker" id="8OR-VV-DHh">
+                        <barButtonItem key="backBarButtonItem" title=" " id="39x-Os-blg"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ccx-Mh-Spr">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="busesTableView" destination="tdf-00-Uxp" id="YQd-7e-ZTe"/>
+                        <segue destination="NIX-u7-wEv" kind="show" identifier="SegueToBusStopsVC" id="d1V-fY-S3T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqj-LR-pNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2149.5999999999999" y="33.733133433283363"/>
+        </scene>
+        <!--BusStopsViewController-->
+        <scene sceneID="xft-2W-dd7">
+            <objects>
+                <viewController title="BusStopsViewController" id="NIX-u7-wEv" customClass="BusStopsViewController" customModule="School_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MAx-vE-hqM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6MJ-kY-aGO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIt-uM-Xi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3006" y="34"/>
         </scene>
     </scenes>
 </document>
