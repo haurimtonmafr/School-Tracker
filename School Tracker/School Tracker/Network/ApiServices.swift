@@ -24,29 +24,38 @@ class ApiServices {
         
         URLSession.shared.dataTask(with: schoolBusesURL) { (data, response, error) in
             guard let data = data else {
-                failure("Data is nil")
+                failure(error!.localizedDescription)
                 return
             }
-            do {
-                /**
-                 Create decoder
-                 */
-                let decoder = JSONDecoder()
-                /**
-                 Decode data to objects of type SchoolBusResponse
-                 */
-                let schoolBusData = try decoder.decode(SchoolBusResponse.self, from: data)
-                guard let responseSchoolBus = schoolBusData.response, let buses = schoolBusData.schoolBuses else {
-                    failure("SchoolBus data properties are nil (\"\(String(describing: schoolBusData.response))\", \"\(String(describing: schoolBusData.schoolBuses))\")")
-                    return
+            
+            guard let responseCode = (response as? HTTPURLResponse)?.statusCode else {
+                failure("Cannot get status code")
+                return
+            }
+            if responseCode == 200 {
+                do {
+                    /**
+                     Create decoder
+                     */
+                    let decoder = JSONDecoder()
+                    /**
+                     Decode data to objects of type SchoolBusResponse
+                     */
+                    let schoolBusData = try decoder.decode(SchoolBusResponse.self, from: data)
+                    guard let responseSchoolBus = schoolBusData.response, let buses = schoolBusData.schoolBuses else {
+                        failure("SchoolBus data properties are nil (\"\(String(describing: schoolBusData.response))\", \"\(String(describing: schoolBusData.schoolBuses))\")")
+                        return
+                    }
+                    if responseSchoolBus {
+                        success(buses)
+                    } else {
+                        failure("SchoolBuses service response was \(responseSchoolBus)")
+                    }
+                } catch let err {
+                    failure(err.localizedDescription)
                 }
-                if responseSchoolBus {
-                    success(buses)
-                } else {
-                    failure("SchoolBuses service response was \(responseSchoolBus)")
-                }
-            } catch let err {
-                failure(err.localizedDescription)
+            } else {
+                failure("HTTP error with status code(\(responseCode))")
             }
             
         }.resume()
@@ -62,26 +71,34 @@ class ApiServices {
                 failure(error!.localizedDescription)
                 return
             }
-            do {
-                /**
-                 Create decoder
-                 */
-                let decoder = JSONDecoder()
-                /**
-                 Decode data to objects of type BusStopResponse
-                 */
-                let stopsData = try decoder.decode(BusStopResponse.self, from: data)
-                guard let responseStops = stopsData.response, let stops = stopsData.busStops else {
-                    failure("SchoolBus data properties are nil (\"\(String(describing: stopsData.response))\", \"\(String(describing: stopsData.busStops))\")")
-                    return
+            guard let responseCode = (response as? HTTPURLResponse)?.statusCode else {
+                failure("Cannot get status code")
+                return
+            }
+            if responseCode == 200 {
+                do {
+                    /**
+                     Create decoder
+                     */
+                    let decoder = JSONDecoder()
+                    /**
+                     Decode data to objects of type BusStopResponse
+                     */
+                    let stopsData = try decoder.decode(BusStopResponse.self, from: data)
+                    guard let responseStops = stopsData.response, let stops = stopsData.busStops else {
+                        failure("SchoolBus data properties are nil (\"\(String(describing: stopsData.response))\", \"\(String(describing: stopsData.busStops))\")")
+                        return
+                    }
+                    if responseStops {
+                        success(stopsData)
+                    } else {
+                        failure("BusStops service response was \(responseStops)")
+                    }
+                } catch let err {
+                    failure(err.localizedDescription)
                 }
-                if responseStops {
-                    success(stopsData)
-                } else {
-                    failure("BusStops service response was \(responseStops)")
-                }
-            } catch let err {
-                failure(err.localizedDescription)
+            } else {
+                failure("HTTP error with status code(\(responseCode))")
             }
         }.resume()
     }
