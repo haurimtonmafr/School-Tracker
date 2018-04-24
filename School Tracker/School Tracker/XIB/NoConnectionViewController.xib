@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoConnectionViewController" customModule="School_Tracker" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="way-cZ-52e" id="7Rx-gG-Nvn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgB-dn-Qzx">
+                    <rect key="frame" x="40" y="205.5" width="295" height="276.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tud-wi-igi">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="276.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="way-cZ-52e" customClass="LOTAnimationView">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="213"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="way-cZ-52e" secondAttribute="height" multiplier="1020:737" id="kXn-So-aY0"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="network_lost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No se puede establecer conexión a la red, por favor vuelve a intentar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0of-uS-G4W">
+                                    <rect key="frame" x="20" y="213" width="255" height="33.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teZ-Zt-10e">
+                                    <rect key="frame" x="0.0" y="246.5" width="295" height="30"/>
+                                    <color key="backgroundColor" red="0.1450980392" green="0.75686274509999996" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Reinintentar">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="0of-uS-G4W" secondAttribute="trailing" constant="20" id="34C-ek-VzZ"/>
+                                <constraint firstAttribute="trailing" secondItem="way-cZ-52e" secondAttribute="trailing" id="Rpe-gg-Z79"/>
+                                <constraint firstItem="teZ-Zt-10e" firstAttribute="leading" secondItem="Tud-wi-igi" secondAttribute="leading" id="TF6-ct-zA7"/>
+                                <constraint firstAttribute="trailing" secondItem="teZ-Zt-10e" secondAttribute="trailing" id="WUs-NR-8mg"/>
+                                <constraint firstItem="way-cZ-52e" firstAttribute="leading" secondItem="Tud-wi-igi" secondAttribute="leading" id="prb-Do-oze"/>
+                                <constraint firstItem="0of-uS-G4W" firstAttribute="leading" secondItem="Tud-wi-igi" secondAttribute="leading" constant="20" id="wkk-kR-LeF"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Tud-wi-igi" firstAttribute="top" secondItem="mgB-dn-Qzx" secondAttribute="top" id="8RJ-uA-A7M"/>
+                        <constraint firstItem="Tud-wi-igi" firstAttribute="leading" secondItem="mgB-dn-Qzx" secondAttribute="leading" id="TIp-wc-Eny"/>
+                        <constraint firstAttribute="trailing" secondItem="Tud-wi-igi" secondAttribute="trailing" id="hvh-ha-1OJ"/>
+                        <constraint firstAttribute="bottom" secondItem="Tud-wi-igi" secondAttribute="bottom" id="irb-qY-cfh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="mgB-dn-Qzx" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="C7d-2m-Hzl"/>
+                <constraint firstItem="mgB-dn-Qzx" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="G04-Gx-df8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mgB-dn-Qzx" secondAttribute="trailing" constant="40" id="OuA-Zj-V7c"/>
+                <constraint firstItem="mgB-dn-Qzx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="Ug2-EJ-uQt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

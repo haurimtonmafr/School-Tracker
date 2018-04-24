@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,14 +17,14 @@
             <objects>
                 <viewController title="LoadingViewController" id="BYZ-38-t0r" customClass="LoadingViewController" customModule="School_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Y2m-aN-08E" userLabel="ContainerStackView">
-                                <rect key="frame" x="40" y="238" width="295" height="191.5"/>
+                                <rect key="frame" x="40" y="202" width="240" height="164"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-4v-sWT" userLabel="AnimationView" customClass="LOTAnimationView">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="147.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="dg8-4v-sWT" secondAttribute="height" multiplier="4:2" id="bOr-uN-8kB"/>
                                         </constraints>
@@ -33,7 +33,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ync-OY-xTX" userLabel="LabelCargando">
-                                        <rect key="frame" x="94" y="167.5" width="107" height="24"/>
+                                        <rect key="frame" x="66.5" y="140" width="107" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ktf-mO-ogz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o7s-es-kRS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1450980392" green="0.75686274509999996" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -91,18 +91,18 @@
             <objects>
                 <viewController title="BusesViewController" id="nbq-Un-EzE" customClass="BusesViewController" customModule="School_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oqj-5U-m4M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-00-Uxp" userLabel="BusesTableView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SchoolBusCell" rowHeight="100" id="gDi-tz-fwi" customClass="SchoolBusTableViewCell" customModule="School_Tracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gDi-tz-fwi" id="WDz-9J-JA7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E1D-bp-Hap" userLabel="BusIconImageView">
@@ -112,16 +112,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ve7-I3-XOv" userLabel="ContainerStackView">
-                                                    <rect key="frame" x="109.5" y="19.5" width="240.5" height="61"/>
+                                                    <rect key="frame" x="109.5" y="19.5" width="185.5" height="61"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhP-JY-9tI" userLabel="BusNameLabel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="185.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Q-EX-jKa" userLabel="BusDescriptionLabel">
-                                                            <rect key="frame" x="0.0" y="40.5" width="240.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="40.5" width="185.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -162,9 +162,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="School Tracker" id="8OR-VV-DHh">
                         <barButtonItem key="backBarButtonItem" title=" " id="39x-Os-blg"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ccx-Mh-Spr">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="busesTableView" destination="tdf-00-Uxp" id="YQd-7e-ZTe"/>
@@ -180,15 +177,55 @@
             <objects>
                 <viewController title="BusStopsViewController" id="NIX-u7-wEv" customClass="BusStopsViewController" customModule="School_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAx-vE-hqM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Msg-Kv-NcK" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyg-NB-zBh">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwS-S4-xly" customClass="LOTAnimationView">
+                                        <rect key="frame" x="110" y="201.5" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vwS-S4-xly" secondAttribute="height" multiplier="1:1" id="0CF-sB-pg8"/>
+                                            <constraint firstAttribute="width" constant="100" id="4D5-wZ-7Vm"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="bouncy_mapmarker"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vwS-S4-xly" firstAttribute="centerX" secondItem="qyg-NB-zBh" secondAttribute="centerX" id="YVp-BI-lMK"/>
+                                    <constraint firstItem="vwS-S4-xly" firstAttribute="centerY" secondItem="qyg-NB-zBh" secondAttribute="centerY" id="zOq-W1-rR7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6MJ-kY-aGO" firstAttribute="top" secondItem="Msg-Kv-NcK" secondAttribute="top" id="0NJ-u4-JvO"/>
+                            <constraint firstItem="qyg-NB-zBh" firstAttribute="bottom" secondItem="MAx-vE-hqM" secondAttribute="bottom" id="0kd-Hn-vaP"/>
+                            <constraint firstItem="6MJ-kY-aGO" firstAttribute="trailing" secondItem="Msg-Kv-NcK" secondAttribute="trailing" id="Gw7-6J-12D"/>
+                            <constraint firstItem="qyg-NB-zBh" firstAttribute="trailing" secondItem="6MJ-kY-aGO" secondAttribute="trailing" id="HLY-v9-Y8u"/>
+                            <constraint firstItem="Msg-Kv-NcK" firstAttribute="leading" secondItem="6MJ-kY-aGO" secondAttribute="leading" id="QTn-8X-PhE"/>
+                            <constraint firstItem="qyg-NB-zBh" firstAttribute="top" secondItem="6MJ-kY-aGO" secondAttribute="top" id="evf-jC-uvt"/>
+                            <constraint firstAttribute="bottom" secondItem="Msg-Kv-NcK" secondAttribute="bottom" id="rJS-8n-jCy"/>
+                            <constraint firstItem="qyg-NB-zBh" firstAttribute="leading" secondItem="6MJ-kY-aGO" secondAttribute="leading" id="zk7-Hw-Nah"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6MJ-kY-aGO"/>
                     </view>
+                    <connections>
+                        <outlet property="loadingAnimationView" destination="vwS-S4-xly" id="BGz-R7-pAj"/>
+                        <outlet property="loadingView" destination="qyg-NB-zBh" id="4nf-fW-AKi"/>
+                        <outlet property="mapView" destination="Msg-Kv-NcK" id="VMO-x1-66j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIt-uM-Xi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3006" y="34"/>
+            <point key="canvasLocation" x="3005.5999999999999" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>

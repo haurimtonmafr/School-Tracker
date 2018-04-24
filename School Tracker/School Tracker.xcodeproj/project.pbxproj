@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BA0532B9B4C099CB62358DF /* Pods_School_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9DE64FC58F75B0FA58C737 /* Pods_School_Tracker.framework */; };
 		951AA016208F19EC00A4AAA7 /* splasIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 951AA015208F19EC00A4AAA7 /* splasIcon.png */; };
+		959BF4C6208EF650008B65BA /* TimeIntervalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959BF4C5208EF650008B65BA /* TimeIntervalUtils.swift */; };
 		95EAC5D1208E3A1000B0D5F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */; };
 		95EAC5D3208E3A1000B0D5F5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAC5D2208E3A1000B0D5F5 /* LoadingViewController.swift */; };
 		95EAC5D6208E3A1000B0D5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EAC5D4208E3A1000B0D5F5 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		0339600DE1D0B93785E69F8F /* Pods-School Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-School Tracker/Pods-School Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		23955D6BA24B0988C648CC6C /* Pods-School Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-School Tracker/Pods-School Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		951AA015208F19EC00A4AAA7 /* splasIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splasIcon.png; sourceTree = "<group>"; };
+		959BF4C5208EF650008B65BA /* TimeIntervalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalUtils.swift; sourceTree = "<group>"; };
 		95EAC5CD208E3A1000B0D5F5 /* School Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "School Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EAC5D0208E3A1000B0D5F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EAC5D2208E3A1000B0D5F5 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
