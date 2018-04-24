@@ -11,19 +11,49 @@ import XCTest
 
 class School_TrackerTests: XCTestCase {
     
+    var apiServ: ApiServices!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        apiServ = ApiServices()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        apiServ = nil
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBusesGET() {
+        let promise = expectation(description: "Status code: 200")
+        apiServ.getSchoolBuses(onSuccess: { (schoolBus) in
+            if schoolBus.isEmpty {
+                XCTFail("\(schoolBus.count) School buses retrieved")
+            } else {
+                XCTAssert(schoolBus.count > 0, "Successfully retrieved \(schoolBus.count) buses")
+                promise.fulfill()
+            }
+        }, onFailure: { (error) in
+            XCTFail(error)
+        })
+
+        waitForExpectations(timeout: 5.0, handler: nil)
+    }
+    
+    func testBusStopGET() {
+        let promise = expectation(description: "Status code: 200")
+        apiServ.getSchoolBusStops(stopsURL: URL(string: "https://api.myjson.com/bins/do6kx")!, onSuccess: { (busStopResponse) in
+            if busStopResponse.response == nil {
+                XCTFail("RESPONSE NIL")
+            } else if busStopResponse.response! {
+                promise.fulfill()
+            }
+        }, onFailure: { (error) in
+            XCTFail(error)
+        })
+        
+        waitForExpectations(timeout: 5.0, handler: nil)
     }
     
     func testPerformanceExample() {
